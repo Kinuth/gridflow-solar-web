@@ -29,7 +29,7 @@ const Navbar = () => {
         >
             <nav className="max-w-screen-xl px-4 mx-auto flex items-center justify-between">
                 <a href="#" className="flex items-center">
-                    <img src="/griflow-logo.png" className="h-8 mr-3 sm:h-10" alt="GridFlow Logo" />
+                    <img src="/gridflow-logo.jpeg" className="h-8 mr-3 sm:h-10" alt="GridFlow Logo" />
                     <span className={`text-2xl font-bold ${isScrolled ? "text-green-600" : "text-white"}`}>
                         GRIDFLOW SOLAR
                     </span>

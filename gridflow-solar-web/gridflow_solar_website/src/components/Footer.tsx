@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="max-w-screen-xl px-4 py-16 mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
                 <div className="max-w-sm">
                     <a href="#" className="flex items-center mb-6">
-                        <img src="/griflow-logo.png" className="h-8 mr-3" alt="Logo" />
+                        <img src="/gridflow-logo.jpeg" className="h-8 mr-3" alt="Logo" />
                         <span className="text-2xl font-bold text-white">GRIDFLOW SOLAR</span>
                     </a>
                     <p className="text-gray-400 mb-6">
