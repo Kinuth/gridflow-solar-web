@@ -1,5 +1,0 @@
-{
-    "installCommand": "cd gridflow_solar_website && npm install",
-    "buildCommand": "cd gridflow_solar_website && npm run build",
-    "outputDirectory": "gridflow_solar_website/dist"
-}
