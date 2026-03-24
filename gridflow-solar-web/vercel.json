@@ -2,6 +2,5 @@
     "buildCommand": "npm run build",
     "installCommand": "npm install",
     "outputDirectory": "dist",
-    "framework": "vite",
-    "rootDirectory": "gridflow-solar-web"
+    "framework": "vite"
 }
