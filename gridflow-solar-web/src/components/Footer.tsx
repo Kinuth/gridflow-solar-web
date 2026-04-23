@@ -10,7 +10,7 @@ import {
     FaLocationDot,
 } from "react-icons/fa6";
 
-const CONTACT_EMAIL = "robinson.olaka@gridflowsolar.com";
+const CONTACT_EMAIL = "info@gridflowsolar.com";
 
 const socialLinks = [
     {
@@ -47,9 +47,13 @@ const socialLinks = [
 
 const quickLinks = [
     { label: "Home", href: "#home" },
+    { label: "About Us", href: "#about" },
+    { label: "Leadership", href: "#leadership" },
     { label: "The Problem", href: "#problem" },
     { label: "Our Solution", href: "#solution" },
     { label: "Impact & PoC", href: "#impact" },
+    { label: "Events", href: "#events" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
 ];
 

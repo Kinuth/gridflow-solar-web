@@ -16,9 +16,14 @@ const Navbar = () => {
 
     const navLinks = [
         { name: "Home", to: "home" },
-        { name: "The Problem", to: "problem" },
+        { name: "About", to: "about" },
+        { name: "Leadership", to: "leadership" },
+        { name: "Products", to: "products" },
         { name: "Solution", to: "solution" },
         { name: "Impact", to: "impact" },
+        { name: "Events", to: "events" },
+        { name: "Partners", to: "partners" },
+        { name: "Testimonials", to: "testimonials" },
         { name: "Contact", to: "contact" },
     ];
 
