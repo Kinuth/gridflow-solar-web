@@ -3,7 +3,8 @@ import { HiOutlinePhotograph } from "react-icons/hi";
 
 const partners = [
     {
-        name: "Mercedes-Benz Bevisioneers",
+        image: '/Partners/bevisioneers.jpeg',
+        name: "beVisioneers: The Mercedes-Benz Fellowship",
         description:
             "GridFlow Solar is proud to be part of the Mercedes-Benz Bevisioneers programme — a global initiative supporting visionary social entrepreneurs driving sustainable impact. This partnership validates our mission and amplifies our reach across Africa.",
         type: "Innovation Partner",
@@ -11,6 +12,7 @@ const partners = [
         accentGradient: "from-blue-400 to-cyan-500",
     },
     {
+        image: '/Partners/hsc.jpeg',
         name: "Hamburg Sustainability Conference (HSC)",
         description:
             "As a featured participant at the Hamburg Sustainability Conference, GridFlow Solar engages with global sustainability leaders, sharing insights on community-owned clean energy and forging alliances that accelerate Africa's energy transition.",
@@ -71,11 +73,22 @@ const PartnersSection = () => {
 
                             <div className="p-8 md:p-10">
                                 {/* Logo Placeholder */}
-                                <div className="relative w-full h-32 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center mb-6 overflow-hidden">
-                                    <HiOutlinePhotograph className="w-10 h-10 text-gray-300 mb-2" />
-                                    <span className="text-xs text-gray-400 font-medium">
-                                        {partner.name} Logo
-                                    </span>
+                                <div className="relative w-full h-32 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center mb-6 overflow-hidden">
+                                    {partner.image ? (
+                                        <img
+                                            src={partner.image}
+                                            alt={`${partner.name} logo`}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
+                                    ) : (
+                                        <>
+                                            <HiOutlinePhotograph className="w-10 h-10 text-gray-300 mb-2" />
+                                            <span className="text-xs text-gray-400 font-medium">
+                                                {partner.name} Logo
+                                            </span>
+                                        </>
+                                    )}
                                     {/* Shimmer effect */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
                                 </div>

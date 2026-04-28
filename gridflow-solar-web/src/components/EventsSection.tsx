@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { HiOutlineCalendar, HiOutlineLocationMarker, HiOutlinePhotograph } from "react-icons/hi";
 
+const resolveImageSrc = (src: string) => src.replace(/ /g, "%20");
+
 const events = [
     {
         title: "Intersolar Africa 2026",
@@ -11,9 +13,9 @@ const events = [
         tag: "Expo",
         tagColor: "bg-amber-100 text-amber-700",
         images: [
-           { alt: "intersolar.jpeg" },
-            { alt: "Intersolar2.jpeg" },
-            { alt: "intersolar3.jpeg" },
+            { src: "/events/intersolar.jpeg", alt: "Intersolar Africa booth" },
+            { src: "/events/intersolar2.jpeg", alt: "Intersolar Africa networking" },
+            { src: "/events/intersolar3.jpeg", alt: "Intersolar Africa presentation" },
         ],
     },
     {
@@ -25,9 +27,9 @@ const events = [
         tag: "Forum",
         tagColor: "bg-blue-100 text-blue-700",
         images: [
-            { alt: "COMESA Forum keynote" },
-            { alt: "GridFlow panel discussion" },
-            { alt: "Networking at COMESA Forum" },
+            { src: "/events/comesa.jpeg", alt: "COMESA forum booth" },
+            { src: "/events/comesa2.jpeg", alt: "COMESA investment forum" },
+            { src: "/events/comesa3.jpeg", alt: "COMESA forum presentation" },
         ],
     },
     {
@@ -39,9 +41,9 @@ const events = [
         tag: "Conference",
         tagColor: "bg-green-100 text-green-700",
         images: [
-            { alt: "Africa Urban Forum stage" },
-            { alt: "Community energy workshop" },
-            { alt: "GridFlow Solar presentation" },
+            { src: "/events/africa urban forum.jpeg", alt: "Africa Urban Forum panel discussion" },
+            { src: "/events/africa urban forum 4.jpeg", alt: "Africa Urban Forum networking" },
+            { src: "/events/africa urban forum3.jpeg", alt: "Africa Urban Forum session" },
         ],
     },
 ];
@@ -102,19 +104,43 @@ const EventsSection = () => {
                             className="bg-gray-50 border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
                         >
                             {/* Image Gallery */}
-                            <div className="grid grid-cols-3 gap-1 p-2">
+                            <div className="grid grid-cols-3 gap-1.5 p-2">
                                 {event.images.map((img, imgIndex) => (
                                     <div
                                         key={imgIndex}
-                                        className={`relative bg-gradient-to-br from-gray-200 to-gray-300 flex flex-col items-center justify-center overflow-hidden ${
+                                        className={`relative bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden ${
                                             imgIndex === 0 ? "rounded-tl-xl" : ""
                                         } ${imgIndex === 2 ? "rounded-tr-xl" : ""}`}
-                                        style={{ aspectRatio: "1 / 1" }}
+                                        style={{ aspectRatio: "4 / 3" }}
                                     >
-                                        <HiOutlinePhotograph className="w-8 h-8 text-gray-400 mb-1" />
-                                        <span className="text-[10px] text-gray-400 text-center px-1 leading-tight">
-                                            {img.alt}
-                                        </span>
+                                        {img.src ? (
+                                            <img
+                                                src={resolveImageSrc(img.src)}
+                                                alt={img.alt}
+                                                className="absolute inset-0 h-full w-full object-cover object-center"
+                                                loading="lazy"
+                                                onError={(e) => {
+                                                    const el = e.currentTarget;
+                                                    if (el.dataset.fallbackApplied === "true") return;
+                                                    el.dataset.fallbackApplied = "true";
+                                                    el.style.display = "none";
+                                                    const parent = el.parentElement;
+                                                    if (parent) {
+                                                        const fallback = document.createElement("div");
+                                                        fallback.className = "flex flex-col items-center justify-center w-full h-full";
+                                                        fallback.innerHTML = `<svg class="w-8 h-8 text-gray-400 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg><span class="text-[10px] text-gray-400 text-center px-1 leading-tight">${img.alt}</span>`;
+                                                        parent.appendChild(fallback);
+                                                    }
+                                                }}
+                                            />
+                                        ) : (
+                                            <div className="flex flex-col items-center justify-center">
+                                                <HiOutlinePhotograph className="w-8 h-8 text-gray-400 mb-1" />
+                                                <span className="text-[10px] text-gray-400 text-center px-1 leading-tight">
+                                                    {img.alt}
+                                                </span>
+                                            </div>
+                                        )}
                                         {/* Shimmer overlay */}
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
                                     </div>

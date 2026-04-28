@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { HiOutlinePhotograph } from "react-icons/hi";
 import { HiOutlineSun, HiOutlineBolt, HiOutlineBattery100, HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 
 const products = [
@@ -8,6 +7,7 @@ const products = [
         description:
             "High-efficiency monocrystalline and polycrystalline solar panels designed for Africa's abundant sunlight. Our panels deliver maximum power output for homes, schools, and community microgrids.",
         icon: HiOutlineSun,
+        image: "/products/Solar-panels.png",
         features: ["Monocrystalline & Polycrystalline", "25-year performance warranty", "Weather-resistant design", "Community-scale ready"],
         gradient: "from-amber-400 to-orange-500",
         bgGlow: "group-hover:shadow-amber-500/20",
@@ -17,6 +17,7 @@ const products = [
         description:
             "Smart hybrid inverters that seamlessly convert and manage solar power for both grid-tied and off-grid installations. Built-in MPPT ensures maximum energy harvest.",
         icon: HiOutlineBolt,
+        image: "/products/inverter.jpg",
         features: ["Hybrid on/off-grid capability", "Built-in MPPT tracking", "Remote monitoring ready", "Surge & overload protection"],
         gradient: "from-blue-400 to-indigo-500",
         bgGlow: "group-hover:shadow-blue-500/20",
@@ -26,6 +27,7 @@ const products = [
         description:
             "Lithium-ion and LiFePO4 energy storage solutions that keep the lights on after sunset. Designed for longevity and deep-cycle performance in African climates.",
         icon: HiOutlineBattery100,
+        image: "/products/batteries.jpeg",
         features: ["LiFePO4 & Lithium-ion", "6000+ cycle lifespan", "Modular & scalable", "Built for tropical climates"],
         gradient: "from-green-400 to-emerald-500",
         bgGlow: "group-hover:shadow-green-500/20",
@@ -35,6 +37,7 @@ const products = [
         description:
             "Our proprietary monitoring and billing platform. Track real-time energy production, manage community billing, receive alerts, and optimise system performance — all from your phone.",
         icon: HiOutlineDevicePhoneMobile,
+        image: "/products/gridflow-app.jpg",
         features: ["Real-time monitoring", "Community billing system", "Smart alerts & analytics", "iOS & Android compatible"],
         gradient: "from-purple-400 to-violet-500",
         bgGlow: "group-hover:shadow-purple-500/20",
@@ -93,12 +96,27 @@ const ProductsSection = () => {
                                 <div className={`h-1.5 bg-gradient-to-r ${product.gradient}`} />
 
                                 <div className="p-8">
-                                    {/* Image Placeholder */}
-                                    <div className="relative w-full h-44 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center mb-6 overflow-hidden">
-                                        <HiOutlinePhotograph className="w-12 h-12 text-gray-300 mb-2" />
-                                        <span className="text-xs text-gray-400 font-medium">
-                                            {product.name} Image
-                                        </span>
+                                    {/* Product Image */}
+                                    <div className="relative w-full h-52 rounded-2xl bg-gray-100 mb-6 overflow-hidden">
+                                        <img
+                                            src={product.image}
+                                            alt={product.name}
+                                            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                                            loading="lazy"
+                                            onError={(e) => {
+                                                const el = e.currentTarget;
+                                                if (el.dataset.fallbackApplied === "true") return;
+                                                el.dataset.fallbackApplied = "true";
+                                                el.style.display = "none";
+                                                const parent = el.parentElement;
+                                                if (parent) {
+                                                    const fallback = document.createElement("div");
+                                                    fallback.className = "absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200";
+                                                    fallback.innerHTML = `<div class="w-14 h-14 rounded-full bg-gradient-to-br ${product.gradient} flex items-center justify-center mb-3 opacity-60"><svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><span class="text-sm text-gray-400 font-medium">${product.name}</span>`;
+                                                    parent.appendChild(fallback);
+                                                }
+                                            }}
+                                        />
                                         {/* Shimmer effect */}
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
                                     </div>
