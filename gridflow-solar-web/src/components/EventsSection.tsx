@@ -6,10 +6,10 @@ const resolveImageSrc = (src: string) => src.replace(/ /g, "%20");
 const events = [
     {
         title: "Intersolar Africa 2026",
-        date: "March 2026",
+        date: "February 3-4 2026",
         location: "Nairobi, Kenya",
         description:
-            "GridFlow Solar will exhibit at Africa's premier solar energy expo, showcasing our community microgrid technology and connecting with continental distributors, investors, and policymakers shaping Africa's renewable energy future.",
+            "GridFlow Solar exhibited at Africa's premier solar energy expo, showcasing our community microgrid technology and connecting with continental distributors, investors, and policymakers shaping Africa's renewable energy future.",
         tag: "Expo",
         tagColor: "bg-amber-100 text-amber-700",
         images: [
@@ -20,8 +20,8 @@ const events = [
     },
     {
         title: "COMESA Investment Forum",
-        date: "June 2026",
-        location: "Lusaka, Zambia",
+        date: "March 26th-30th 2026",
+        location: "Nairobi, Kenya",
         description:
             "Presenting GridFlow's scalable community-owned energy model to COMESA member states, engaging trade ministers and development finance institutions on cross-border clean energy investment opportunities across Eastern and Southern Africa.",
         tag: "Forum",
@@ -34,7 +34,7 @@ const events = [
     },
     {
         title: "Africa Urban Forum",
-        date: "September 2026",
+        date: "April 8th-10th 2026",
         location: "Nairobi, Kenya",
         description:
             "GridFlow Solar will participate in panel discussions on sustainable urbanisation, presenting our decentralised energy solutions as a model for powering Africa's rapidly growing cities and peri-urban communities.",
