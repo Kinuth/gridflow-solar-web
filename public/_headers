@@ -1,0 +1,4 @@
+# Allow Google AdSense preview tool to frame the site
+/*
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self' https://*.google.com https://*.googlesyndication.com https://www.googletagmanager.com
