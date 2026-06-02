@@ -11,6 +11,7 @@ import EventsSection from "./components/EventsSection";
 import PartnersSection from "./components/PartnersSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Footer from "./components/Footer";
+import CookieConsent from "./components/CookieConsent";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <TestimonialsSection />
       <LeadershipSection />
       <Footer />
+      <CookieConsent />
     </Fragment>
   );
 };
