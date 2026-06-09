@@ -26,7 +26,7 @@ const founders: Member[] = [
         bio: "He Leads the technical vision and engineering strategy to redefine the management and distribution of renewable energy. He focuses on architecting scalable, data-driven solutions ranging from IoT telemetry for solar inverters to robust microgrid management platforms that bridge the gap beween hardware infrastructure and digital intelligence. Drawing on an extensive background in backend engineering and software architecture, Ryan is dedicated to building high-performance systems that optimize energy efficiency and operational transparency. At Gridflow, he oversees the development of the company's proprietary software ecosystem, ensuring the technology stack remains at the forefront of the energy transition while delivering reliable, sustainable power solutions.",
         linkedin: "https://www.linkedin.com/in/ryan-kinuthia/",
         initials: "RK",
-        photo: "/ryan-kinuthia.jpg",
+        photo: "/ryan-kinuthia.jpeg",
     },
 ];
 
