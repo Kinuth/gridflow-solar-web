@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { HiOutlineSun, HiOutlineBolt, HiOutlineBattery100, HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { FaDroplet } from "react-icons/fa6";
 
 const products = [
     {
@@ -7,7 +8,7 @@ const products = [
         description:
             "High-efficiency monocrystalline and polycrystalline solar panels designed for Africa's abundant sunlight. Our panels deliver maximum power output for homes, schools, and community microgrids.",
         icon: HiOutlineSun,
-        image: "/products/Solar-panels.png",
+        image: "/products/solar-panels.png",
         features: ["Monocrystalline & Polycrystalline", "25-year performance warranty", "Weather-resistant design", "Community-scale ready"],
         gradient: "from-amber-400 to-orange-500",
         bgGlow: "group-hover:shadow-amber-500/20",
@@ -17,7 +18,7 @@ const products = [
         description:
             "Smart hybrid inverters that seamlessly convert and manage solar power for both grid-tied and off-grid installations. Built-in MPPT ensures maximum energy harvest.",
         icon: HiOutlineBolt,
-        image: "/products/inverter.jpg",
+        image: "/products/inverters.jpg",
         features: ["Hybrid on/off-grid capability", "Built-in MPPT tracking", "Remote monitoring ready", "Surge & overload protection"],
         gradient: "from-blue-400 to-indigo-500",
         bgGlow: "group-hover:shadow-blue-500/20",
@@ -27,17 +28,27 @@ const products = [
         description:
             "Lithium-ion and LiFePO4 energy storage solutions that keep the lights on after sunset. Designed for longevity and deep-cycle performance in African climates.",
         icon: HiOutlineBattery100,
-        image: "/products/batteries.jpeg",
+        image: "/products/batteries.png",
         features: ["LiFePO4 & Lithium-ion", "6000+ cycle lifespan", "Modular & scalable", "Built for tropical climates"],
         gradient: "from-green-400 to-emerald-500",
         bgGlow: "group-hover:shadow-green-500/20",
     },
     {
+        name: "Solar Water Pumpimg solutions",
+        description:
+            "Solar water pumps are designed to pump water from a source such as a borehole, river, or well to a storage tank using solar energy. They are ideal for agricultural and domestic use in areas with limited access to electricity.",
+        icon: FaDroplet,
+        image: "/products/solar-water-pumps.png",
+        features: ["DC and AC pumps", "Maximum water output for agricultural and domestic use", "Ideal for areas with limited access to electricity", "Modular & scalable", "Built for tropical climates"],
+        gradient: "from-cyan-400 to-blue-500",
+        bgGlow: "group-hover:shadow-cyan-500/20",
+    },
+    {
         name: "GridFlow Solar App",
         description:
-            "Our proprietary monitoring and billing platform. Track real-time energy production, manage community billing, receive alerts, and optimise system performance — all from your phone.",
+            "Our proprietary monitoring and billing platform. Track real-time energy production, manage community billing, receive alerts, and optimise system performance all from your phone.",
         icon: HiOutlineDevicePhoneMobile,
-        image: "/products/gridflow-app.jpg",
+        image: "/products/gridflow-app.png",
         features: ["Real-time monitoring", "Community billing system", "Smart alerts & analytics", "iOS & Android compatible"],
         gradient: "from-purple-400 to-violet-500",
         bgGlow: "group-hover:shadow-purple-500/20",
@@ -74,7 +85,7 @@ const ProductsSection = () => {
                         transition={{ duration: 0.6, delay: 0.15 }}
                         className="text-lg text-gray-600 max-w-2xl mx-auto"
                     >
-                        End-to-end solar energy solutions — from panels on the roof to the app in your
+                        End-to-end solar energy solutions from panels on the roof to the app in your
                         pocket. Built for Africa, powered by the sun.
                     </motion.p>
                 </div>

@@ -6,7 +6,7 @@ const partners = [
         image: '/Partners/bevisioneers.jpeg',
         name: "beVisioneers: The Mercedes-Benz Fellowship",
         description:
-            "GridFlow Solar is proud to be part of the Mercedes-Benz Bevisioneers programme — a global initiative supporting visionary social entrepreneurs driving sustainable impact. This partnership validates our mission and amplifies our reach across Africa.",
+            "GridFlow Solar is proud to be part of the Mercedes-Benz Bevisioneers programme a global initiative supporting visionary social entrepreneurs driving sustainable impact. This partnership validates our mission and amplifies our reach across Africa.",
         type: "Innovation Partner",
         typeColor: "bg-blue-100 text-blue-700",
         accentGradient: "from-blue-400 to-cyan-500",

@@ -206,7 +206,7 @@ const ImpactSection = () => {
                     <div className="lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center bg-gray-900 text-white">
                         <h3 className="text-3xl font-bold mb-6">Why It Matters</h3>
                         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                            Reliable renewable energy is not just about decarbonization — it directly shapes human outcomes.
+                            Reliable renewable energy is not just about decarbonization it directly shapes human outcomes.
                             By replacing unreliable grid power and eliminating diesel backups, we:
                         </p>
                         <ul className="space-y-4">

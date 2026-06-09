@@ -86,7 +86,7 @@ const EventsSection = () => {
                         transition={{ duration: 0.6, delay: 0.15 }}
                         className="text-lg text-gray-600 max-w-2xl mx-auto"
                     >
-                        We actively engage with the global clean-energy community — sharing our
+                        We actively engage with the global clean-energy community sharing our
                         learnings, forging partnerships, and advancing the decentralised energy
                         movement.
                     </motion.p>

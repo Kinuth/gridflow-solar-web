@@ -12,7 +12,7 @@ const values = [
         icon: <HiOutlineGlobeAlt className="w-8 h-8" />,
         title: "Sustainability",
         description:
-            "Every system we build is designed for long-term climate impact — reducing emissions and replacing fossil-fuel dependency.",
+            "Every system we build is designed for long-term climate impact reducing emissions and replacing fossil-fuel dependency.",
     },
     {
         icon: <HiOutlineHeart className="w-8 h-8" />,
@@ -59,7 +59,7 @@ const AboutSection = () => {
                         GridFlow Solar is a Kenyan clean-energy company on a mission to bring reliable,
                         affordable, and community-owned solar power to institutions and communities that
                         need it most. We design, deploy, and manage solar microgrids that replace
-                        unreliable grid connections and costly diesel generators — putting power and
+                        unreliable grid connections and costly diesel generators putting power and
                         ownership directly into the hands of the people we serve.
                     </motion.p>
                 </div>
@@ -82,7 +82,7 @@ const AboutSection = () => {
                         </h3>
                         <p className="text-gray-300 leading-relaxed text-lg">
                             To provide clean, uninterrupted solar energy to schools, healthcare
-                            facilities, and rural communities across Kenya — eliminating downtime,
+                            facilities, and rural communities across Kenya eliminating downtime,
                             reducing costs, and driving climate-resilient development from the ground up.
                         </p>
                     </motion.div>
@@ -102,7 +102,7 @@ const AboutSection = () => {
                             A Decentralised Energy Future
                         </h3>
                         <p className="text-green-100 leading-relaxed text-lg">
-                            We envision a Kenya — and a continent — where every community has sovereign
+                            We envision a Kenya and a continent where every community has sovereign
                             control over its energy supply. Where blackouts are history, diesel fumes
                             are a memory, and clean power is a right, not a privilege.
                         </p>
